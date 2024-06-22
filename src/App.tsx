@@ -1,25 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Header from './components/tsx/Header';
+import Home from './components/tsx/Home';
+import About from './components/tsx/About';
+import Interest from './components/tsx/Interests';
+import Games from './components/tsx/Games';
+import Movies from './components/tsx/Movies';
+import Landscapes from './components/tsx/Landscapes';
+import Musics from './components/tsx/Musics';
+import Education from './components/tsx/Education';
+import Footer from './components/tsx/Footer';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/interest" element={<Interest />}>
+            <Route path="games" element={<Games />} />
+            <Route path="movies" element={<Movies />} />
+            <Route path="landscapes" element={<Landscapes />} />
+            <Route path="musics" element={<Musics />} />
+          </Route>
+          <Route path="/education" element={<Education />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

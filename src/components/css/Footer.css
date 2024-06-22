@@ -1,0 +1,30 @@
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+  
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.social-links a, .social-links p{
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    transition: color 0.3s;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.social-links a:hover, .social-links p:hover {
+    color: #ff6347;
+}
+  
