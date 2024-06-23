@@ -1,8 +1,8 @@
 // src/components/About.tsx
-import React from 'react';
+// import React from 'react';
 // // import './About.css';
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <section className="about">
       <h1>About</h1>

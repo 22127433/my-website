@@ -1,0 +1,78 @@
+@import '../../App.css';
+
+h1{
+    text-align: center;
+    font-size: var(--secondary-font-size);
+    font-weight: bold;
+}
+
+.games {
+    margin: 100px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.game-list li {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.game-list li:hover {
+    transform: translateY(-5px);
+    color: var(--secondary-text-color);
+}
+
+.game-poster {
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.game-poster:hover {
+    transform: scale(1.1);
+}
+
+.game-title {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.game-info {
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--primary-text-color);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    right: 50px;
+    background-color: var(--secondary-text-color);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.close-btn:hover {
+    background-color: #aaa;
+}

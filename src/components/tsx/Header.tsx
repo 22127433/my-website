@@ -14,14 +14,7 @@ const Header: React.FC = () => {
             </Link>
           </li>
           <li className='header-nav-item'>
-            <Link to="/about" className="header-nav-item-link">
-              About
-            </Link>
-          </li>
-          <li className='header-nav-item'>
-            <Link to="/interests" className="header-nav-item-link">
-              Interests
-            </Link>
+            <span className='header-nav-item-link'>Interests</span>
             <div className='header-nav-item-interests'>
                 <ul className='header-nav-dropdown'>
                   <li className='header-nav-dropdown-item'>
@@ -39,17 +32,12 @@ const Header: React.FC = () => {
                       Landscapes
                     </Link>
                   </li>
-                  <li className='header-nav-dropdown-item'>
-                    <Link to="/interests/musics" className="header-nav-dropdown-item-link">
-                      Musics
-                    </Link>
-                  </li>
                 </ul>
             </div>
           </li>
           <li className='header-nav-item'>
-            <Link to="/education" className="header-nav-item-link">
-              Education
+            <Link to="/about" className="header-nav-item-link">
+              About
             </Link>
           </li>
         </ul>

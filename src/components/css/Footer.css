@@ -1,11 +1,13 @@
-/* Footer styling */
+@import '../../App.css';
+
 .footer {
-    background-color: #333;
-    color: white;
+    position: fixed;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    bottom: 0;
     text-align: center;
+    z-index: 5;
 }
   
 .social-links {
@@ -15,16 +17,17 @@
     margin-bottom: 10px;
 }
   
-.social-links a, .social-links p{
-    color: white;
+.social-links a, .social-links span{
+    color: var(--primary-text-color);
     text-decoration: none;
-    margin: 0;
+    margin-top:10px;
     transition: color 0.3s;
     font-weight: bold;
     cursor: pointer;
 }
   
-.social-links a:hover, .social-links p:hover {
-    color: #ff6347;
+.social-links a:hover, .social-links span:hover {
+    color: var(--secondary-text-color);
+    transition: var(--transition);
 }
   

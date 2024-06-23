@@ -1,9 +1,27 @@
-.content{
-  padding: 20px;
-  background-color: #f4f4f4;
-  color: #333;
-  width: 80%;
-  height: 1500px;
-  margin: 0 auto;
+*,
+*::after,
+*::before {
+  font-family: 'Arial', sans-serif;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
 }
 
+:root{
+  --primary-background-color: #333;
+  --secondary-background-color: #444;
+  --primary-text-color: white;
+  --secondary-text-color: #ff6347;
+
+  --primary-font-size: 16px;
+  --secondary-font-size: 20px;
+
+  --transition: all 0.2s ease-in;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

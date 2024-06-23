@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="social-links">
         <a href="https://www.facebook.com/profile.php?id=100026177912030">Facebook</a>
-        <p>Email: <span className="copy-email" onClick={handleCopyEmail}>{email}</span></p>
+        <span className="copy-email" onClick={handleCopyEmail}>Email: {email}</span>
       </div>
     </footer>
   );
