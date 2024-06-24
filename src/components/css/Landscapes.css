@@ -6,19 +6,12 @@
     text-align: center;
 }
 
-img{
+.landscapes img{
     width: 600px;
     height: 400px;
-    object-fit: cover;
-    cursor: pointer;
     border-radius: 10px;
     align-items: center;
     vertical-align: middle;
-}
-
-img:hover{
-    transform: scale(1.1);
-    opacity: 0.8;
 }
 
 .menu-block{
@@ -64,17 +57,17 @@ ul {
     margin-bottom: 5px;
 }
 
-h1 {
+.landscapes h1 {
     font-size: 25px;
     color: var(--secondary-text-color);
 }
 
-h2 {
+.landscapes h2 {
     margin-top: 20px;
     font-size: 18px;
 }
 
-h2:hover, .menu-landscape-item:hover{
+.landscapes h2:hover, .menu-landscape-item:hover{
     color: var(--secondary-text-color);
 }
 

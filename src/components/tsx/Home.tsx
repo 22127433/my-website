@@ -1,14 +1,22 @@
 import React from 'react';
-// import '../css/Home.css';
+import background from '../assets/backgroundHome.png';
+import '../css/Home.css';
 
 const Home: React.FC = () => {
   return (
-    <div className="home">
-        <section className="hero">
-            <h1>Chào Mừng Đến Website</h1>
-            <p></p>
-        </section>
-    </div>
+    <section className="home">
+      <img
+        src={background}
+        alt="background"
+        className="home-background"
+      />
+      <div className="home-content">
+        <h1 className="home-title">Welcome to the Home Page</h1>
+        <p className="home-description">
+          Đây là website demo của mình, mong bro Phát chấm điểm nhẹ tay thôi
+        </p>
+      </div>
+    </section>
   );
 };
 

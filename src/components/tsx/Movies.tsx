@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import interstellarImg from '../assets/interstellar.jpeg';
 import shutterIslandImg from '../assets/shutter-island.jpeg';
 import oldboyImg from '../assets/oldboy.jpeg';
-import '../css/Movies.css';
+import '../css/Movies-Games.css';
 
 type MovieInfo = {
   title: string;
@@ -15,21 +15,21 @@ type MovieInfo = {
 const moviesData: MovieInfo[] = [
   {
     title: 'Interstellar',
-    description: 'A team of explorers travel through a wormhole in space in an attempt to ensure humanity\'s survival.',
+    description: 'Một nhóm phi hành gia thực hiện một nhiệm vụ cuối cùng để cứu loài người trên một hành trình tới ngoài không gian trong một lỗ đen.',
     director: 'Christopher Nolan',
     year: 2014,
     img: interstellarImg
   },
   {
     title: 'Shutter Island',
-    description: 'In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.',
+    description: 'Vào năm 1954, một cảnh sát liên bang được gửi đến một cơ sở tâm thần học trên một hòn đảo hẻo lánh để điều tra một vụ mất tích.',
     director: 'Martin Scorsese',
     year: 2010,
     img: shutterIslandImg
   },
   {
     title: 'Oldboy',
-    description: 'After being kidnapped and imprisoned for 15 years, Oh Dae-Su is released, only to find that he must find his captor in 5 days.',
+    description: 'Sau khi bị bắt giữ và giam giữ trong 15 năm, một người đàn ông được giải thoát và truy tìm kẻ bắt cóc của mình.',
     director: 'Park Chan-wook',
     year: 2003,
     img: oldboyImg
@@ -52,16 +52,16 @@ const Movies: React.FC = () => {
       <h1>Favorite Movies</h1>
       <ul className="movie-list">
         <li onClick={() => handleMovieClick(0)}>
-          <img src={interstellarImg} alt="Interstellar" className="movie-poster" />
-          <div className="movie-title">Interstellar</div>
+          <img src={interstellarImg} alt={moviesData[0].title} className="movie-poster" />
+          <div className="movie-title">{moviesData[0].title}</div>
         </li>
         <li onClick={() => handleMovieClick(1)}>
-          <img src={shutterIslandImg} alt="Shutter Island" className="movie-poster" />
-          <div className="movie-title">Shutter Island</div>
+          <img src={shutterIslandImg} alt={moviesData[1].title} className="movie-poster" />
+          <div className="movie-title">{moviesData[1].title}</div>
         </li>
         <li onClick={() => handleMovieClick(2)}>
-          <img src={oldboyImg} alt="Oldboy" className="movie-poster" />
-          <div className="movie-title">Oldboy</div>
+          <img src={oldboyImg} alt={moviesData[2].title} className="movie-poster" />
+          <div className="movie-title">{moviesData[2].title}</div>
         </li>
       </ul>
       {selectedMovie !== null && (

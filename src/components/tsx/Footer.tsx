@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/Footer.css';
 
 const Footer: React.FC = () => {
-  const email = 'anhtus2711@gmail.com'; // Thay thế bằng địa chỉ email thực của bạn
+  const email = 'anhtus2711@gmail.com';
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email).then(() => {
       alert(`Email "${email}" đã được sao chép vào clipboard.`);

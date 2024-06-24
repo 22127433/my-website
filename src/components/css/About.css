@@ -1,0 +1,55 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 100px;
+}
+
+.about h1 {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+.avatar {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 50%;
+    cursor: zoom-in;
+    box-shadow: 0 4px 8px var(--rgba);
+}
+
+.avatar.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.8);
+    z-index: 1000;
+    border-radius: 0%;
+    max-width: 70%;
+    max-height: 70%;
+    cursor: zoom-out;
+}
+
+.about-infor {
+    flex: 1;
+}
+
+.about-infor.zoomed {
+    display: none;
+}
+
+.name {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.description, .purpose, .reference{
+    padding: 20px 0;
+}
+
+.about a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}

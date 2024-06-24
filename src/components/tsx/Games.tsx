@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import witcherImg from '../assets/witcher.jpg';
 import lastOfUsImg from '../assets/last-of-us.jpeg';
 import cyberpunkImg from '../assets/cyberpunk.jpeg';
-import '../css/Games.css';
+import '../css/Movies-Games.css';
 
 interface GameInfo {
   title: string;
@@ -15,21 +15,21 @@ interface GameInfo {
 const gamesData: GameInfo[] = [
   {
     title: 'The Witcher 3: Wild Hunt',
-    description: 'An open-world RPG where you play as Geralt of Rivia, a monster hunter.',
+    description: 'Một game nhập vai hành động với cốt truyện phong phú và gameplay tuyệt vời.',
     developer: 'CD Projekt Red',
     year: 2015,
     img: witcherImg
   },
   {
     title: 'The Last of Us',
-    description: 'A story-driven game where you navigate a post-apocalyptic world.',
+    description: 'Một game hành động phiêu lưu với cốt truyện đầy cảm xúc và nhân văn.',
     developer: 'Naughty Dog',
     year: 2013,
     img: lastOfUsImg
   },
   {
     title: 'Cyberpunk 2077',
-    description: 'An open-world, action-adventure story set in Night City.',
+    description: 'Một game nhập vai hành động với cốt truyện hấp dẫn và thế giới mở rộng lớn.',
     developer: 'CD Projekt Red',
     year: 2020,
     img: cyberpunkImg
@@ -37,36 +37,42 @@ const gamesData: GameInfo[] = [
 ];
 
 const Games: React.FC = () => {
-  const [selectedGame, setSelectedGame] = useState<number | null>(null);
+  const [selectedgame, setSelectedgame] = useState<number | null>(null);
 
-  const handleGameClick = (gameIndex: number) => {
-    setSelectedGame(gameIndex);
+  const handlegameClick = (gameIndex: number) => {
+    setSelectedgame(gameIndex);
   };
 
-  const closeGameInfo = () => {
-    setSelectedGame(null);
+  const closegameInfo = () => {
+    setSelectedgame(null);
   };
 
   return (
     <section className="games">
       <h1>Favorite Games</h1>
       <ul className="game-list">
-        {gamesData.map((game, index) => (
-          <li key={index} onClick={() => handleGameClick(index)}>
-            <img src={game.img} alt={game.title} className="game-poster" />
-            <div className="game-title">{game.title}</div>
-          </li>
-        ))}
+        <li onClick={() => handlegameClick(0)}>
+          <img src={witcherImg} alt={gamesData[0].title} className="game-poster" />
+          <div className="game-title">{gamesData[0].title}</div>
+        </li>
+        <li onClick={() => handlegameClick(1)}>
+          <img src={lastOfUsImg} alt={gamesData[1].title} className="game-poster" />
+          <div className="game-title">{gamesData[1].title}</div>
+        </li>
+        <li onClick={() => handlegameClick(2)}>
+          <img src={cyberpunkImg} alt={gamesData[2].title} className="game-poster" />
+          <div className="game-title">{gamesData[2].title}</div>
+        </li>
       </ul>
-      {selectedGame !== null && (
+      {selectedgame !== null && (
         <div className="game-info">
-          <button className="close-btn" onClick={closeGameInfo}>
+          <button className="close-btn" onClick={closegameInfo}>
             Close
           </button>
-          <h3>{gamesData[selectedGame].title}</h3>
-          <p><strong>Developer:</strong> {gamesData[selectedGame].developer}</p>
-          <p><strong>Year:</strong> {gamesData[selectedGame].year}</p>
-          <p>{gamesData[selectedGame].description}</p>
+          <h3>{gamesData[selectedgame].title}</h3>
+          <p><strong>Developer:</strong> {gamesData[selectedgame].developer}</p>
+          <p><strong>Year:</strong> {gamesData[selectedgame].year}</p>
+          <p>{gamesData[selectedgame].description}</p>
         </div>
       )}
     </section>
